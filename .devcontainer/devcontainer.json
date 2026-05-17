@@ -1,0 +1,21 @@
+{
+    "name": "Passerelle VPN et Payload",
+    "image": "://microsoft.com",
+    "runArgs": [
+        "--privileged",
+        "--device=/dev/net/tun:/dev/net/tun"
+    ],
+    "forwardPorts": [1194, 3128],
+    "portsAttributes": {
+        "3128": {
+            "label": "Squid Proxy",
+            "onAutoForward": "notify",
+            "visibility": "public"
+        },
+        "1194": {
+            "label": "OpenVPN",
+            "onAutoForward": "notify",
+            "visibility": "public"
+        }
+    }
+}
