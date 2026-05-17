@@ -5,7 +5,10 @@
         "--privileged",
         "--device=/dev/net/tun:/dev/net/tun"
     ],
-    "forwardPorts": [1194, 3128],
+    "forwardPorts": [
+        3128,
+        1194
+    ],
     "portsAttributes": {
         "3128": {
             "label": "Squid Proxy",
